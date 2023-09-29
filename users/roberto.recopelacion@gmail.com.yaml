@@ -1,0 +1,10 @@
+super: true
+name: 'Reco P. Lacion'
+id: 7181fbdd-ac96-460a-b7ae-c3aaa87d10cf
+password_hash: $2y$10$My0OI8SmOLIOvYVGNKOSCe45dr4tfx47/h9YMVTIIqcN.RigqD/Ne
+preferences:
+  collections:
+    pages:
+      after_save: continue_editing
+    brand:
+      after_save: continue_editing

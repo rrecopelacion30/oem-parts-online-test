@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ site:short_locale }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title ?? site:name }}</title>
+    {{ vite src="resources/js/site.js|resources/css/site.css|resources/css/cp.css" }}
+</head>
+<body>
+    <header class="mainHeader">
+        <div class="cntr">
+            <div class="mainHeaderWrapper">
+                <div class="mainHeaderLogo">
+                    test
+                </div>
+                <nav class="mainHeaderNav">
+                    <ul class="mainNav">
+                        {{ nav:main_navigation }}
+                            <li><a href="{{ url }}">{{ title }}</a></li>
+                        {{ /nav:main_navigation }}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="topNav">
+        <div class="cntr">
+            <ul class="topNavList">
+                {{ collection from="brand" }}
+                    <li>
+                        <a href="{{ brand_link }}" target="_blank">
+                            {{ title }}
+                        </a>
+                    </li>
+                {{ /collection}}
+            </ul>
+        </div>
+    </section>
+    
+    <main>
+        {{ template_content }}
+    </main>
+</body>
+</html>

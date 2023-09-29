@@ -1,0 +1,45 @@
+<!-- banner -->
+{{ hero_image }}
+<section class="bannerSection" style="background-image: url('{{ url }}');">
+{{ /hero_image }}
+    <div class="cntr">
+        <div class="bannerSectionWrapper">
+            <h1 class="bannerSectionTitle">
+                
+                {{ hero_title }}
+            </h1>
+            <p class="bannerSectionSubTitle">
+                {{ hero_sub_title }}
+            </p>
+        </div>
+    </div>
+</section>
+<!-- end of banner -->
+
+<!-- vehicle -->
+<section class="vehicleSection">
+    <div class="vehicleSectionTitle">
+        <h2>Select Your Vehicle Brand</h2>
+    </div>
+    <div class="vehicleSectionWrapper">
+        <div class="cntr">
+            <ul class="vehicleList">
+                {{ collection from="brand" }}
+                    <li>
+                        <a href="{{ brand_link }}" target="_blank">
+                            <div class="vehicleCard">
+                                <div class="vehicleImage">
+                                    {{ brand_logo }}
+                                        <img src="{{ url }}" alt="">
+                                    {{ /brand_logo }}
+                                </div>
+                                <h3 class="vehicleTitle">{{ title }}</h3>
+                            </div>
+                        </a>
+                    </li>
+                {{ /collection}}
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- end of vehicle -->
